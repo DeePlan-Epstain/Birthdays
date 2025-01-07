@@ -1,0 +1,41 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "5cd33b3d-6f1b-4e68-b6ce-9185d397b0dd",
+  "alias": "BirthdaysWebPart",
+  "componentType": "WebPart",
+  "version": "*",
+  "manifestVersion": 2,
+  "requiresCustomScript": false,
+  "supportedHosts": [
+    "SharePointWebPart",
+    "TeamsPersonalApp",
+    "TeamsTab",
+    "SharePointFullPage"
+  ],
+  "supportsThemeVariants": true,
+  "supportsFullBleed": true,
+  "preconfiguredEntries": [
+    {
+      "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+      "group": {
+        "default": "Advanced"
+      },
+      "title": {
+        "default": "Birthdays"
+      },
+      "description": {
+        "default": "Birthdays description"
+      },
+      "officeFabricIconFontName": "BirthdayCake",
+      "properties": {
+        "description": "Birthdays",
+        "BirthdaysRange": "10",
+        "BirthdayListId": "b1048d40-e9b2-4331-8028-1ba5934715a3",
+        "BackgroundImage": "",
+        "SpotlightId": "339b2478-8e1c-401c-b105-fd318aabd3c3",
+        "SpotlightInterval": 10000,
+        "pageItemsNumber": 4
+      }
+    }
+  ]
+}

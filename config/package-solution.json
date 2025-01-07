@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "birthdays-client-side-solution",
+    "id": "5d49f00a-3ad5-469f-941d-61d9ef3f46e1",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "birthdays description"
+      },
+      "longDescription": {
+        "default": "birthdays description"
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "birthdays Feature",
+        "description": "The feature that activates elements of the birthdays solution.",
+        "id": "37cc9e2e-cbe8-4269-92bf-20889a9853ff",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/birthdays.sppkg"
+  }
+}

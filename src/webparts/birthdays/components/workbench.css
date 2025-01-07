@@ -1,0 +1,58 @@
+/* Set the workbench and canvas to full width */
+/* div[class='CanvasZone'] {
+    width: 100% !important;
+  }
+  
+  div[class='CanvasZone'] > div {
+    width: 100% !important;
+  }
+  
+  /* Adjust the padding for the web part content */
+  /* div[class='ControlZone'] { */
+    /* padding: 0 !important; */
+  /* }  */
+  /* div[data-automation-id="CanvasZone"] {
+    padding: 0 !important;
+    margin: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .MuiBox-root {
+    padding: 0 !important;
+    > :first-child {
+      padding: 0 !important;
+    }
+  }
+  #workbenchPageContent {
+    max-width: 100% !important;
+    margin: 0 !important;
+    > :first-child {
+      > :first-child {
+        > :first-child {
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+      }
+    }
+  }
+  #SuiteNavWrapper {
+    display: none !important;
+  }
+  div[data-automation-id="pageHeader"]{
+    display: none !important;
+  }
+  div[id="spSiteHeader"]{
+    display: none !important;
+  }
+  div[data-automation-id="CanvasControl"]{
+    margin: 0px !important;
+    padding: 0px !important;
+  }
+  div[data-automation-id="CanvasSection"]{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  #CommentsWrapper{
+    display: none !important;
+  }
+  .sp-appBar{display: none !important;} */

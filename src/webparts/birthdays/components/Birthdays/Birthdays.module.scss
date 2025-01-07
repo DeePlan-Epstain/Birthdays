@@ -1,0 +1,596 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+// :global #workbenchPageContent {
+//   max-width: 100%;
+//   left: 0;
+//   right: 0;
+
+//   & > div {
+//     & > div {
+//       overflow: visible;
+
+//       & > div {
+//         overflow: visible;
+//         padding: 0;
+
+//         .CanvasComponent {
+//           .CanvasZone {
+//             margin: auto;
+//             padding-left: 15px;
+//           }
+
+//           .CanvasZone--noMargin {
+//             margin: auto;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+// :global #workbenchPageContent {
+//   .CanvasComponent {
+//     .CanvasZone {
+//       max-width: 100%;
+//       padding-left: 0 !important;
+//       padding-right: 0;
+
+//       .CanvasSection {
+//         padding-left: 0;
+//         padding-right: 0;
+
+//         .ControlZone {
+//           padding: 0;
+
+//           .CanvasControlToolbar {
+//             left: -32px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.Birthdays {
+  margin: 0;
+}
+
+.BirthdaysBackGroundImage {
+  //font-family: "Rubik",sans-serif !important;
+  display: flex;
+  // height: 500px;
+
+  // background-image: url('../assets/backgroundimg.png');
+  /* You can specify additional background properties here if needed */
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* Other background properties as needed */
+  background-position: 50%;
+  justify-content: space-evenly;
+  // padding-top: 5rem;
+  // bottom-top: 
+  // height: 25rem;
+  gap: 3em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+.BirthdaysLeftContainer {
+  //font-family: "Rubik",sans-serif !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background: #0F4D8E;
+  height: 100%;
+  width: 60%;
+}
+
+.BirthdaysRightContainer {
+  align-items: center;
+  display: flex;
+  background-color: transparent;
+  width: 24%;
+  height: 100%;
+  justify-content: end;
+}
+
+.BirthdaysContainer {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fcfcfc;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  height: 250px;
+
+  .BirthdaysTitleCon {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    margin: 15px 0;
+
+    .title {
+
+      color: #000;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
+  .BirthdaysPersonContainer {
+    display: flex;
+    // padding: 0 2% 2% 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    // height: 165px;
+    justify-content: space-evenly;
+    gap: 1em;
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+
+    &.changing {
+      opacity: 0;
+    }
+
+    .item {
+      display: flex;
+      width: 15%;
+      // height: 275px;
+      border-radius: 5px;
+      //background: #fff;
+      //box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      max-width: 200px;
+      padding-right: 1rem;
+      padding-left: 1rem;
+
+      .peopleImg {
+        width: 78px;
+        height: 78px;
+        flex-shrink: 0;
+        object-fit: cover;
+        margin-bottom: 1%;
+        margin-left: 1%;
+        // border: 3px solid #bafffb;
+        border-radius: 50%;
+        pointer-events: none;
+        background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
+        margin-top: 15px;
+      }
+
+      >span {
+        //
+        // margin-top: 2%;
+        color: #2d2d2d;
+        text-align: center;
+        font-size: 15px;
+        font-style: normal;
+        line-height: normal;
+        text-wrap: nowrap;
+        -webkit-box-orient: vertical;
+        line-clamp: 1;
+        -webkit-line-clamp: 1;
+        display: box;
+        display: -webkit-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: break-spaces;
+        direction: ltr;
+      }
+
+      >span:nth-child(3) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 25px;
+        width: 80%;
+        margin-top: 7%;
+      }
+
+      >span:nth-child(5) {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 25px;
+        width: 80%;
+        margin-top: 7%;
+      }
+    }
+  }
+}
+
+.popoverContainer {
+  left: 2.5% !important;
+  bottom: 3% !important;
+
+}
+
+.peopleImgInModal {
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin-bottom: 1%;
+  margin-left: 1%;
+  border-radius: 50%;
+  pointer-events: none;
+  background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
+  margin-top: 15px;
+}
+
+.inputContainer {
+  // Input & img div
+  display: flex;
+  align-items: center;
+  width: 92%;
+  border: 0.5px solid #bababa;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  justify-content: flex-start;
+
+  > :first-child {
+    // Input
+    width: 77%;
+    // margin: 1% 4% 2% 7%;
+    // background-color: #eeeded;
+    border: none;
+  }
+
+  >img {
+    width: 9%;
+    margin: 0 7% 0 0;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: slideSendButton 1s infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+.placeholderStyle {
+  background-color: white !important;
+}
+
+.sendIcon {
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+.sendIcon:hover {
+  color: #103252;
+}
+
+/**
+ * Extracted from: SweetAlert
+ * Modified by: Istiak Tridip
+ */
+
+
+button {
+  margin: 5px;
+}
+
+.successCheckmark {
+  width: 80px;
+  height: 115px;
+  margin: 0 auto;
+  position: absolute;
+
+  &.active .checkIcon {
+    display: none;
+  }
+
+
+}
+
+.EmployeeSpotlight {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #fcfcfc;
+  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  height: 250px;
+}
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+.birthday {
+  height: 30%;
+  background: linear-gradient(180deg, #22b387 0%, #4cd2aa 100%);
+  border-radius: 15px;
+  // padding: 2% 4%;
+  padding: 8px 25px 8px 25px;
+  overflow: hidden;
+  margin: 0 4.25px 8.5px 4.25px;
+
+  >span {
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    color: #ffffff;
+  }
+}
+
+.redX {
+  display: flex;
+  align-items: flex-end;
+  height: 50%;
+  font-size: 100px;
+  color: red;
+}
+
+// Modal
+
+.popover,
+.show,
+.bsPopoverAuto {
+  top: -5% !important;
+
+}
+
+.emailModal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 40%;
+  width: 272px;
+  height: 230px;
+  background-color: #eeeded;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+  z-index: 20;
+  transform: translate(90px, -55px);
+}
+
+.modalHeader {
+  // font-family: 'Rubik', sans-serif;
+  // src: url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+  // font-weight: 600;
+  padding: 9% 0 0 0;
+  font-style: normal;
+  font-size: 15px;
+  line-height: 17px;
+  color: #514f4f;
+  text-align: center;
+  white-space: wrap;
+  text-overflow: ellipsis;
+}
+
+.emailMsg {
+  padding: 0 4%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.emailImg {
+  padding-bottom: 10%;
+}
+
+.modalTriangle {
+  position: absolute;
+  top: 99%;
+  right: 28%;
+  width: 100%;
+  height: 18%;
+  clip-path: polygon(44% 100%, 42% 0, 50% 0);
+  background-color: #eeeded;
+  opacity: 0.8;
+  filter: blur(6.5px);
+  z-index: 10;
+}
+
+.closeModalContainer {
+  position: fixed;
+  cursor: default;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+// Styles for the arrow divs
+.arrowLeft,
+.arrowRight {
+  position: absolute;
+  top: 50%; // Center vertically
+  transform: translateY(-50%); // Offset by half its height for perfect centering
+  z-index: 10; // Ensure the arrows are above other content
+  cursor: pointer; // Change cursor to indicate clickability
+  color: #007da9; // Adjust the color as needed
+  padding: 10px; // Add some padding around the arrow
+  font-size: 48px; // Size of the arrow
+}
+
+.arrowLeft:hover> :nth-child(1),
+.arrowRight:hover> :nth-child(1) {
+  background-color: rgb(240, 240, 240);
+  opacity: 0.5;
+  border-radius: 50%;
+}
+
+// Specific styles for the left arrow
+.arrowLeft {
+  left: -0.9%; // Adjust the distance from the left edge of the container
+}
+
+// Specific styles for the right arrow
+.arrowRight {
+  right: -0.9%; // Adjust the distance from the right edge of the container
+}
+
+@keyframes scrollPepoleAnimation {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+.inputContainer {
+  // Input & img div
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 90%;
+  border: none;
+
+  > :first-child {
+    // Input
+    width: 77%;
+    margin: 1% 4% 2% 7%;
+    background-color: #eeeded;
+    border: none;
+  }
+
+  >img {
+    width: 9%;
+    margin: 0 7% 0 0;
+    transform: rotate(180deg) !important;
+    cursor: pointer;
+    transition: 0.3s;
+    animation: slideSendButton 1s infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+}
+
+.emailSend {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.placeholderStyle {
+  background-color: #eeeded !important;
+
+}
+
+@keyframes scrollPepoleAnimation {
+  0% {
+    left: 0%;
+  }
+
+  50% {
+    left: 50%;
+  }
+
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes scrollPepoleAnimation {
+  0% {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  5% {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  50% {
+    -moz-transform: translateX(-15%);
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
+  }
+
+  55% {
+    -moz-transform: translateX(-15%);
+    -webkit-transform: translateX(-15%);
+    transform: translateX(-15%);
+  }
+
+  100% {
+    -moz-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideSendButton {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(13%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .BirthdaysBackGroundImage {
+    display: flex;
+    flex-direction: column; // Stacks the image and content on smaller screens
+    align-items: center;
+
+  }
+
+  .BirthdaysLeftContainer {
+    width: 91%;
+  }
+
+  .BirthdaysRightContainer {
+    width: 91%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .BirthdaysContainer {
+    width: 88%;
+
+    .BirthdaysPersonContainer {
+      gap: 0;
+
+      .item {
+        width: 10%;
+      }
+    }
+
+  }
+
+  .BirthdaysRightContainer {
+    display: flex;
+    justify-content: center;
+  }
+
+  // .arrowRight {
+  //   right: -10px
+  // }
+
+  // .arrowLeft {
+  //   left: -10px
+  // }
+}
