@@ -94,7 +94,7 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
         try {
           // const userProfile = await this.props.sp.profiles.getPropertiesFor(`i:0#.f|membership|${i.EmployeeEmail}`);
           // const pictureUrlEntry = userProfile.UserProfileProperties.find((prop: any) => prop.Key === "PictureURL");
-          let profPic = `https://epstin100.sharepoint.com/sites/EpsteinPortal/_layouts/15/userphoto.aspx?size=L&username=${i?.EmployeeEmail}`
+          let profPic = `${this.props.context.pageContext.web.absoluteUrl}/_layouts/15/userphoto.aspx?size=L&username=${i?.EmployeeEmail}`
           // i.EmployeePhoto = pictureUrlEntry ? pictureUrlEntry.Value : null;
           i.EmployeePhoto = profPic;
         } catch (error) {
@@ -135,11 +135,17 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
     try {
       if (!this.state.EmailText) return false
       const user = await this.props.sp.web.currentUser();
+      const rtlSubject = `\u202Bיש לך ברכה מאת ${user.Title}`;
       const emailProps: IEmailProperties = {
         To: [email],
         From: user.Email,
-        Subject: `You've got a new greeting from ${user.Title}! (${user.Email})`,
-        Body: this.state.EmailText
+        // Subject: `You've got a new greeting from ${user.Title}! (${user.Email})`,
+        Subject: rtlSubject,
+        Body: `
+        <div dir="rtl" style="text-align: right;">
+          ${this.state.EmailText}
+        </div>
+      `
       };
       await this.props.sp.utility.sendEmail(emailProps);
       this.setState({ IsSent: true })
@@ -356,12 +362,12 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                             </>}
                             {this.state.IsSent === true && <div className={styles.emailSend}>
                               <img className={styles.emailImg} src={require('../../assets/EmailSentV.png')} alt="" />
-                              <span className={styles.emailMsg}>An email has been sent to {People.Title}</span>
+                              <span className={styles.emailMsg}>אימייל נשלח ל{People.Title}</span>
                             </div>}
 
                             {this.state.IsSent === false && <div className={styles.emailSend}>
                               <span className={styles.redX}>X</span>
-                              <span className={styles.emailMsg}>Your email could not be sent to {People.Title}</span>
+                              <span className={styles.emailMsg}>שגיאה בעת שליחת המייל ל{People.Title}</span>
                             </div>}
 
                             {/* {this.state.IsSent && } */}
