@@ -77,9 +77,9 @@ export default function Spotlight({ sp, SpotlightId, context, SpotlightInterval 
 
     return (
         <div className={styles.spotlightContainer}>
-            <div className={`${styles.title}`}>
+            <span className={`${styles.title}`}>
                 זרקור לעובד
-            </div>
+            </span>
             {currentEmployee && (
                 <div className={`${styles.item}`}>
                     <div className={styles.imageContainer}>
@@ -89,8 +89,9 @@ export default function Spotlight({ sp, SpotlightId, context, SpotlightInterval 
                             className={styles.peopleImg}
                         />
                     </div>
-                    <div dangerouslySetInnerHTML={{ __html: currentEmployee?.eventDescription }} className={styles.eventDescription}></div>
-                    <div style={{ fontWeight: 700 }}>{currentEmployee?.employeeName}</div>
+                    <div dangerouslySetInnerHTML={{ __html: currentEmployee?.eventDescription }} className={styles.eventDescription}
+                        style={{ overflowY: currentEmployee?.eventDescription.length < 150 ? 'hidden' : 'scroll' }}></div>
+                    <span style={{ fontWeight: 700 }}>{currentEmployee?.employeeName}</span>
                 </div>
             )}
         </div>

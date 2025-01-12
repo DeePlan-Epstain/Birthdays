@@ -284,9 +284,9 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
           <div className={`${styles.BirthdaysLeftContainer}`}>
             <div className={`${styles.BirthdaysContainer}`}>
               <div className={`${styles.BirthdaysTitleCon}`}>
-                <div id="bdayTitle" className={`${styles.title}`}>
+                <span className={`${styles.title}`}>
                   ימי הולדת
-                </div>
+                </span>
                 {/* <img src={require("../assets/baloons.svg")} alt="" /> */}
               </div>
               <div className='pageing' style={{ display: 'flex', justifyContent: 'space-around', position: 'relative' }}>

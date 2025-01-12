@@ -1,53 +1,55 @@
-@import "~@fluentui/react/dist/sass/References.scss";
-// :global #workbenchPageContent {
-//   max-width: 100%;
-//   left: 0;
-//   right: 0;
+// @import "~@fluentui/react/dist/sass/References.scss";
 
-//   & > div {
-//     & > div {
-//       overflow: visible;
+:global #workbenchPageContent {
+  max-width: 100%;
+  left: 0;
+  right: 0;
 
-//       & > div {
-//         overflow: visible;
-//         padding: 0;
+  &>div {
+    &>div {
+      overflow: visible;
 
-//         .CanvasComponent {
-//           .CanvasZone {
-//             margin: auto;
-//             padding-left: 15px;
-//           }
+      &>div {
+        overflow: visible;
+        padding: 0;
 
-//           .CanvasZone--noMargin {
-//             margin: auto;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-// :global #workbenchPageContent {
-//   .CanvasComponent {
-//     .CanvasZone {
-//       max-width: 100%;
-//       padding-left: 0 !important;
-//       padding-right: 0;
+        .CanvasComponent {
+          .CanvasZone {
+            margin: auto;
+            padding-left: 15px;
+          }
 
-//       .CanvasSection {
-//         padding-left: 0;
-//         padding-right: 0;
+          .CanvasZone--noMargin {
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
 
-//         .ControlZone {
-//           padding: 0;
+:global #workbenchPageContent {
+  .CanvasComponent {
+    .CanvasZone {
+      max-width: 100%;
+      padding-left: 0 !important;
+      padding-right: 0;
 
-//           .CanvasControlToolbar {
-//             left: -32px;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
+      .CanvasSection {
+        padding-left: 0;
+        padding-right: 0;
+
+        .ControlZone {
+          padding: 0;
+
+          .CanvasControlToolbar {
+            left: -32px;
+          }
+        }
+      }
+    }
+  }
+}
 
 .Birthdays {
   margin: 0;
@@ -87,9 +89,17 @@
   align-items: center;
   display: flex;
   background-color: transparent;
-  width: 30%;
+  width: 31.5%;
   height: 100%;
   justify-content: end;
+}
+
+.title {
+  color: #0d4282;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .BirthdaysContainer {
@@ -108,14 +118,7 @@
     justify-content: center;
     margin: 15px 0;
 
-    .title {
 
-      color: #000;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: normal;
-    }
   }
 
   .BirthdaysPersonContainer {
@@ -165,7 +168,7 @@
       >span {
         //
         // margin-top: 2%;
-        color: #2d2d2d;
+        // color: #2d2d2d;
         text-align: center;
         font-size: 15px;
         font-style: normal;
@@ -180,6 +183,7 @@
         text-overflow: ellipsis;
         white-space: break-spaces;
         direction: ltr;
+        font-weight: 500;
       }
 
       >span:nth-child(3) {
@@ -364,6 +368,7 @@ button {
   text-align: center;
   white-space: wrap;
   text-overflow: ellipsis;
+  font-family: sans-serif;
 }
 
 .emailMsg {

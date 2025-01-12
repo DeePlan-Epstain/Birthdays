@@ -1,5 +1,7 @@
+@import "~@fluentui/react/dist/sass/References.scss";
+
 .spotlightContainer {
-    font-family: "Rubik", sans-serif !important;
+    // font-family: "Rubik", sans-serif !important;
     gap: 0.5em;
     width: 100%;
     flex-shrink: 0;
@@ -12,14 +14,16 @@
     display: flex;
     align-items: center;
 
-    .title {
-        color: #000;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: normal;
-        padding-top: 15px;
-    }
+
+}
+
+.title {
+    padding-top: 1em;
+    color: #0d4282;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .item {
@@ -61,6 +65,8 @@
         max-width: 80%;
         justify-self: baseline;
         width: auto;
+        height: 150px;
+        overflow-y: scroll;
     }
 }
 
