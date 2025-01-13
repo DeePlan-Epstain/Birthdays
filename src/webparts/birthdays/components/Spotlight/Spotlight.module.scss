@@ -6,15 +6,14 @@
     width: 100%;
     flex-shrink: 0;
     border-radius: 5px;
-    background: #fcfcfc;
+    // background: #fcfcfc;
+    background-color: white;
     // box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
     border: 0.5px solid #d5dce9;
     flex-direction: column;
     height: 250px;
     display: flex;
     align-items: center;
-
-
 }
 
 .title {
@@ -41,6 +40,7 @@
     align-items: center;
     cursor: pointer;
     justify-content: space-around;
+    font-weight: 500;
 
     .imageContainer {
         display: flex;
@@ -67,6 +67,8 @@
         width: auto;
         height: 150px;
         overflow-y: scroll;
+        display: flex;
+        align-items: center;
     }
 }
 

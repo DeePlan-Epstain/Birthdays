@@ -1,55 +1,55 @@
 // @import "~@fluentui/react/dist/sass/References.scss";
 
-:global #workbenchPageContent {
-  max-width: 100%;
-  left: 0;
-  right: 0;
+// :global #workbenchPageContent {
+//   max-width: 100%;
+//   left: 0;
+//   right: 0;
 
-  &>div {
-    &>div {
-      overflow: visible;
+//   &>div {
+//     &>div {
+//       overflow: visible;
 
-      &>div {
-        overflow: visible;
-        padding: 0;
+//       &>div {
+//         overflow: visible;
+//         padding: 0;
 
-        .CanvasComponent {
-          .CanvasZone {
-            margin: auto;
-            padding-left: 15px;
-          }
+//         .CanvasComponent {
+//           .CanvasZone {
+//             margin: auto;
+//             padding-left: 15px;
+//           }
 
-          .CanvasZone--noMargin {
-            margin: auto;
-          }
-        }
-      }
-    }
-  }
-}
+//           .CanvasZone--noMargin {
+//             margin: auto;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-:global #workbenchPageContent {
-  .CanvasComponent {
-    .CanvasZone {
-      max-width: 100%;
-      padding-left: 0 !important;
-      padding-right: 0;
+// :global #workbenchPageContent {
+//   .CanvasComponent {
+//     .CanvasZone {
+//       max-width: 100%;
+//       padding-left: 0 !important;
+//       padding-right: 0;
 
-      .CanvasSection {
-        padding-left: 0;
-        padding-right: 0;
+//       .CanvasSection {
+//         padding-left: 0;
+//         padding-right: 0;
 
-        .ControlZone {
-          padding: 0;
+//         .ControlZone {
+//           padding: 0;
 
-          .CanvasControlToolbar {
-            left: -32px;
-          }
-        }
-      }
-    }
-  }
-}
+//           .CanvasControlToolbar {
+//             left: -32px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 .Birthdays {
   margin: 0;
@@ -66,11 +66,11 @@
   background-repeat: no-repeat;
   /* Other background properties as needed */
   background-position: 50%;
-  justify-content: space-between;
+  justify-content: flex-start;
   // padding-top: 5rem;
   // bottom-top: 
   // height: 25rem;
-  gap: 3em;
+  // gap: 3em;
   // padding-top: 2em;
   // padding-bottom: 2em;
 }
@@ -78,18 +78,18 @@
 .BirthdaysLeftContainer {
   //font-family: "Rubik",sans-serif !important;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: end;
+  justify-content: flex-start;
   // background: #0F4D8E;
   height: 100%;
-  width: 60%;
+  width: 100%;
 }
 
 .BirthdaysRightContainer {
   align-items: center;
   display: flex;
   background-color: transparent;
-  width: 31.5%;
+  width: 45.5%;
   height: 100%;
   justify-content: end;
 }
@@ -103,10 +103,11 @@
 }
 
 .BirthdaysContainer {
-  width: 100%;
+  width: 95.5%;
   flex-shrink: 0;
   border-radius: 5px;
-  background: #fcfcfc;
+  // background: #fcfcfc;
+  background-color: white;
   // box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
   border: 0.5px solid #d5dce9;
   flex-direction: column;
@@ -132,6 +133,7 @@
     width: 100%;
     transition: opacity 0.3s ease-in-out;
     opacity: 1;
+    gap: 0.5em;
 
     &.changing {
       opacity: 0;
@@ -152,8 +154,8 @@
       padding-left: 1rem;
 
       .peopleImg {
-        width: 78px;
-        height: 78px;
+        width: 100px;
+        height: 100px;
         flex-shrink: 0;
         object-fit: cover;
         margin-bottom: 1%;
@@ -192,7 +194,7 @@
         text-overflow: ellipsis;
         height: 25px;
         width: 80%;
-        margin-top: 7%;
+        margin-top: 4%;
       }
 
       >span:nth-child(5) {
