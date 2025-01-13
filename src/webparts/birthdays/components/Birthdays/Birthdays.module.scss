@@ -562,15 +562,18 @@ button {
     display: flex;
     flex-direction: column; // Stacks the image and content on smaller screens
     align-items: center;
-
+    justify-content: center;
+    gap: 2em;
   }
 
   .BirthdaysLeftContainer {
     width: 91%;
+    justify-content: center;
   }
 
   .BirthdaysRightContainer {
     width: 91%;
+    justify-content: center;
   }
 }
 

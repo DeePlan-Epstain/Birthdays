@@ -25,6 +25,10 @@
     line-height: normal;
 }
 
+.sportLightEmployeeName {
+    margin-top: -55px;
+}
+
 .item {
     display: grid;
     place-items: center;
@@ -65,7 +69,7 @@
         max-width: 80%;
         justify-self: baseline;
         width: auto;
-        height: 150px;
+        height: 90px;
         overflow-y: scroll;
         display: flex;
         align-items: center;
@@ -73,8 +77,17 @@
 }
 
 @media (max-width: 1024px) {
+    .spotlightContainer {
+        width: 95.5%;
+        align-items: center;
+    }
+
     .item .imageContainer {
         width: 60%;
+    }
+
+    .sportLightEmployeeName {
+        margin: 0;
     }
 }
 

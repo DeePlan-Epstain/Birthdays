@@ -91,7 +91,7 @@ export default function Spotlight({ sp, SpotlightId, context, SpotlightInterval 
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: currentEmployee?.eventDescription }} className={styles.eventDescription}
                         style={{ overflowY: currentEmployee?.eventDescription.length < 150 ? 'hidden' : 'scroll' }}></div>
-                    <span>{currentEmployee?.employeeName}</span>
+                    <span className={styles.sportLightEmployeeName}>{currentEmployee?.employeeName}</span>
                 </div>
             )}
         </div>
