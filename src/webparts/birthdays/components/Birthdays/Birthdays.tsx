@@ -299,13 +299,33 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                   {!this.state.IsLoading ? <>
                     {this.state.BirthdaysList.length > 0 ? currentItems.map((People, idx) =>
                       <li id={`popover_${idx}`} key={idx} className={`${styles.item}`} onClick={(ev) => this.openModal(ev, idx, People)}>
-                        <img
-                          // src={this.onPictureConverterUrl(People?.EmployeePhoto, People?.Id)}
-                          src={People?.EmployeePhoto || DefaultProfilePic}
+                        <div style={{ position: "relative", display: "inline-block" }}>
+                          {/* Profile Image */}
+                          <img
+                            src={People?.EmployeePhoto || DefaultProfilePic}
+                            alt=""
+                            className={styles.peopleImg}
+                            style={{
+                              width: "100px", // Adjust width as needed
+                              height: "100px", // Adjust height as needed
+                              borderRadius: "50%", // Make the profile image circular
+                            }}
+                          />
+                          {/* Balloons Image */}
+                          {moment().isSame(moment(People?.BirthdayDate), 'day') && <img
+                            src={require("../../assets/balloons.svg")}
+                            alt=""
+                            style={{
+                              position: "absolute",
+                              top: "0",
+                              left: "0",
+                              right: "70px",
+                              width: "40px", // Adjust width as needed
+                              height: "190px", // Adjust height as needed
+                            }}
+                          />}
+                        </div>
 
-                          alt=""
-                          className={styles.peopleImg}
-                        />
                         <Tooltip title={People?.Title}>
                           <span>{People?.Title}</span>
                         </Tooltip>
