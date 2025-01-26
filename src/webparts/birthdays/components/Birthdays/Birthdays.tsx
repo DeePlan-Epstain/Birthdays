@@ -312,7 +312,8 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                             }}
                           />
                           {/* Balloons Image */}
-                          {moment().isSame(moment(People?.BirthdayDate), 'day') && <img
+                          {moment().format('MM-DD') === moment(People?.BirthdayDate).format('MM-DD') && <img
+
                             src={require("../../assets/balloons.svg")}
                             alt=""
                             style={{
