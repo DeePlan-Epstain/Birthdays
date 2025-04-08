@@ -52,225 +52,218 @@
 // }
 
 .Birthdays {
-  margin: 0;
+    margin: 0;
 }
 
 .BirthdaysBackGroundImage {
-  //font-family: "Rubik",sans-serif !important;
-  display: flex;
-  // height: 500px;
+    //font-family: "Rubik",sans-serif !important;
+    display: flex;
+    // height: 500px;
 
-  // background-image: url('../assets/backgroundimg.png');
-  /* You can specify additional background properties here if needed */
-  background-size: cover;
-  background-repeat: no-repeat;
-  /* Other background properties as needed */
-  background-position: 50%;
-  justify-content: flex-start;
-  // padding-top: 5rem;
-  // bottom-top: 
-  // height: 25rem;
-  // gap: 3em;
-  // padding-top: 2em;
-  // padding-bottom: 2em;
+    // background-image: url('../assets/backgroundimg.png');
+    /* You can specify additional background properties here if needed */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* Other background properties as needed */
+    background-position: 50%;
+    justify-content: flex-start;
+    // padding-top: 5rem;
+    // bottom-top:
+    // height: 25rem;
+    // gap: 3em;
+    // padding-top: 2em;
+    // padding-bottom: 2em;
 }
 
 .BirthdaysLeftContainer {
-  //font-family: "Rubik",sans-serif !important;
-  display: flex;
-  align-items: end;
-  justify-content: flex-start;
-  // background: #0F4D8E;
-  height: 100%;
-  width: 100%;
+    //font-family: "Rubik",sans-serif !important;
+    display: flex;
+    align-items: end;
+    justify-content: flex-start;
+    // background: #0F4D8E;
+    height: 100%;
+    width: 100%;
 }
 
 .BirthdaysRightContainer {
-  align-items: center;
-  display: flex;
-  background-color: transparent;
-  width: 45.5%;
-  height: 100%;
-  justify-content: end;
+    align-items: center;
+    display: flex;
+    background-color: transparent;
+    width: 45.5%;
+    height: 100%;
+    justify-content: end;
 }
 
 .title {
-  color: #0d4282;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
+    color: #0d4282;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .BirthdaysContainer {
-  width: 95.5%;
-  flex-shrink: 0;
-  border-radius: 5px;
-  // background: #fcfcfc;
-  background-color: white;
-  // box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
-  border: 0.5px solid #d5dce9;
-  flex-direction: column;
-  height: 250px;
+    width: 95.5%;
+    flex-shrink: 0;
+    border-radius: 5px;
+    // background: #fcfcfc;
+    background-color: white;
+    // box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    border: 0.5px solid #d5dce9;
+    flex-direction: column;
+    height: 250px;
 
-  .BirthdaysTitleCon {
-    flex-direction: row;
-    display: flex;
-    justify-content: center;
-    margin: 17px 0;
-
-
-  }
-
-  .BirthdaysPersonContainer {
-    display: flex;
-    // padding: 0 2% 2% 0;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    // height: 165px;
-    justify-content: space-evenly;
-    gap: 1em;
-    width: 100%;
-    transition: opacity 0.3s ease-in-out;
-    opacity: 1;
-    gap: 0.5em;
-
-    &.changing {
-      opacity: 0;
+    .BirthdaysTitleCon {
+        flex-direction: row;
+        display: flex;
+        justify-content: center;
+        margin: 17px 0;
     }
 
-    .item {
-      display: flex;
-      width: 15%;
-      // height: 275px;
-      border-radius: 5px;
-      //background: #fff;
-      //box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
-      flex-direction: column;
-      align-items: center;
-      cursor: pointer;
-      max-width: 200px;
-      padding-right: 1rem;
-      padding-left: 1rem;
-      font-size: 14px;
+    .BirthdaysPersonContainer {
+        display: flex;
+        // padding: 0 2% 2% 0;
+        overflow-x: hidden;
+        overflow-y: hidden;
+        // height: 165px;
+        justify-content: space-evenly;
+        gap: 1em;
+        width: 100%;
+        transition: opacity 0.3s ease-in-out;
+        opacity: 1;
+        gap: 0.5em;
 
-      .peopleImg {
-        width: 100px;
-        height: 100px;
-        flex-shrink: 0;
-        object-fit: cover;
-        margin-bottom: 1%;
-        margin-left: 1%;
-        // border: 3px solid #bafffb;
-        border-radius: 50%;
-        pointer-events: none;
-        background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
-        margin-top: 15px;
-      }
+        &.changing {
+            opacity: 0;
+        }
 
-      >span {
-        //
-        // margin-top: 2%;
-        // color: #2d2d2d;
-        text-align: center;
-        font-size: 15px;
-        font-style: normal;
-        line-height: normal;
-        text-wrap: nowrap;
-        -webkit-box-orient: vertical;
-        line-clamp: 1;
-        -webkit-line-clamp: 1;
-        display: box;
-        display: -webkit-box;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: break-spaces;
-        direction: ltr;
-        font-weight: 500;
-      }
+        .item {
+            display: flex;
+            width: 15%;
+            // height: 275px;
+            border-radius: 5px;
+            //background: #fff;
+            //box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.1);
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            max-width: 200px;
+            padding-right: 1rem;
+            padding-left: 1rem;
+            font-size: 14px;
 
-      >span:nth-child(3) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 25px;
-        width: 80%;
-        margin-top: 4%;
-      }
+            .peopleImg {
+                width: 100px;
+                height: 100px;
+                flex-shrink: 0;
+                object-fit: cover;
+                margin-bottom: 1%;
+                margin-left: 1%;
+                // border: 3px solid #bafffb;
+                border-radius: 50%;
+                pointer-events: none;
+                background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
+                margin-top: 15px;
+            }
 
-      >span:nth-child(5) {
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        height: 25px;
-        width: 80%;
-        margin-top: 7%;
-      }
+            > span {
+                //
+                // margin-top: 2%;
+                // color: #2d2d2d;
+                max-width: 100%;
+                text-align: center;
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                display: inline-block; /* or block */
+                direction: ltr;
+            }
+
+            > span:nth-child(3) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 25px;
+                width: 80%;
+                margin-top: 4%;
+            }
+
+            > span:nth-child(5) {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                height: 25px;
+                width: 80%;
+                margin-top: 7%;
+            }
+        }
     }
-  }
 }
 
 .popoverContainer {
-  left: 2.5% !important;
-  bottom: 3% !important;
-
+    left: 2.5% !important;
+    bottom: 3% !important;
 }
 
 .peopleImgInModal {
-  width: 78px;
-  height: 78px;
-  flex-shrink: 0;
-  object-fit: cover;
-  margin-bottom: 1%;
-  margin-left: 1%;
-  border-radius: 50%;
-  pointer-events: none;
-  background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
-  margin-top: 15px;
+    width: 78px;
+    height: 78px;
+    flex-shrink: 0;
+    object-fit: cover;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    border-radius: 50%;
+    pointer-events: none;
+    background: lightgray -1.243px 0px / 150.273% 100% no-repeat;
+    margin-top: 15px;
 }
 
 .inputContainer {
-  // Input & img div
-  display: flex;
-  align-items: center;
-  width: 92%;
-  border: 0.5px solid #bababa;
-  margin-top: 15px;
-  margin-bottom: 15px;
-  justify-content: flex-start;
+    // Input & img div
+    display: flex;
+    align-items: center;
+    width: 92%;
+    border: 0.5px solid #bababa;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    justify-content: flex-start;
 
-  > :first-child {
-    // Input
-    width: 77%;
-    // margin: 1% 4% 2% 7%;
-    // background-color: #eeeded;
-    border: none;
-  }
-
-  >img {
-    width: 9%;
-    margin: 0 7% 0 0;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: slideSendButton 1s infinite;
-
-    &:hover {
-      animation-play-state: paused;
+    > :first-child {
+        // Input
+        width: 77%;
+        // margin: 1% 4% 2% 7%;
+        // background-color: #eeeded;
+        border: none;
     }
-  }
+
+    > img {
+        width: 9%;
+        margin: 0 7% 0 0;
+        cursor: pointer;
+        transition: 0.3s;
+        animation: slideSendButton 1s infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }
 
 .placeholderStyle {
-  background-color: white !important;
+    background-color: white !important;
 }
 
 .sendIcon {
-  cursor: pointer;
-  transform: rotate(180deg);
+    cursor: pointer;
+    transform: rotate(180deg);
 }
 
 .sendIcon:hover {
-  color: #103252;
+    color: #103252;
 }
 
 /**
@@ -278,60 +271,57 @@
  * Modified by: Istiak Tridip
  */
 
-
 button {
-  margin: 5px;
+    margin: 5px;
 }
 
 .successCheckmark {
-  width: 80px;
-  height: 115px;
-  margin: 0 auto;
-  position: absolute;
+    width: 80px;
+    height: 115px;
+    margin: 0 auto;
+    position: absolute;
 
-  &.active .checkIcon {
-    display: none;
-  }
-
-
+    &.active .checkIcon {
+        display: none;
+    }
 }
 
 .EmployeeSpotlight {
-  width: 100%;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #fcfcfc;
-  box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
-  flex-direction: column;
-  height: 250px;
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #fcfcfc;
+    box-shadow: 4px 4px 20px 0px rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    height: 250px;
 }
 
 //////////////////////////////////////////////////////////////////////////////////////
 
 .birthday {
-  height: 30%;
-  background: linear-gradient(180deg, #22b387 0%, #4cd2aa 100%);
-  border-radius: 15px;
-  // padding: 2% 4%;
-  padding: 8px 25px 8px 25px;
-  overflow: hidden;
-  margin: 0 4.25px 8.5px 4.25px;
+    height: 30%;
+    background: linear-gradient(180deg, #22b387 0%, #4cd2aa 100%);
+    border-radius: 15px;
+    // padding: 2% 4%;
+    padding: 8px 25px 8px 25px;
+    overflow: hidden;
+    margin: 0 4.25px 8.5px 4.25px;
 
-  >span {
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 24px;
-    color: #ffffff;
-  }
+    > span {
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        color: #ffffff;
+    }
 }
 
 .redX {
-  display: flex;
-  align-items: flex-end;
-  height: 50%;
-  font-size: 100px;
-  color: red;
+    display: flex;
+    align-items: flex-end;
+    height: 50%;
+    font-size: 100px;
+    color: red;
 }
 
 // Modal
@@ -339,270 +329,267 @@ button {
 .popover,
 .show,
 .bsPopoverAuto {
-  top: -5% !important;
-
+    top: -5% !important;
 }
 
 .emailModal {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  position: absolute;
-  top: 40%;
-  width: 272px;
-  height: 230px;
-  background-color: #eeeded;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 25px;
-  z-index: 20;
-  transform: translate(90px, -55px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 40%;
+    width: 272px;
+    height: 230px;
+    background-color: #eeeded;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    z-index: 20;
+    transform: translate(90px, -55px);
 }
 
 .modalHeader {
-  // font-family: 'Rubik', sans-serif;
-  // src: url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
-  // font-weight: 600;
-  padding: 9% 0 0 0;
-  font-style: normal;
-  font-size: 15px;
-  line-height: 17px;
-  color: #514f4f;
-  text-align: center;
-  white-space: wrap;
-  text-overflow: ellipsis;
-  font-family: sans-serif;
+    // font-family: 'Rubik', sans-serif;
+    // src: url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+    // font-weight: 600;
+    padding: 9% 0 0 0;
+    font-style: normal;
+    font-size: 15px;
+    line-height: 17px;
+    color: #514f4f;
+    text-align: center;
+    white-space: wrap;
+    text-overflow: ellipsis;
+    font-family: sans-serif;
 }
 
 .emailMsg {
-  padding: 0 4%;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 18px;
-  text-align: center;
+    padding: 0 4%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    text-align: center;
 }
 
 .emailImg {
-  padding-bottom: 10%;
+    padding-bottom: 10%;
 }
 
 .modalTriangle {
-  position: absolute;
-  top: 99%;
-  right: 28%;
-  width: 100%;
-  height: 18%;
-  clip-path: polygon(44% 100%, 42% 0, 50% 0);
-  background-color: #eeeded;
-  opacity: 0.8;
-  filter: blur(6.5px);
-  z-index: 10;
+    position: absolute;
+    top: 99%;
+    right: 28%;
+    width: 100%;
+    height: 18%;
+    clip-path: polygon(44% 100%, 42% 0, 50% 0);
+    background-color: #eeeded;
+    opacity: 0.8;
+    filter: blur(6.5px);
+    z-index: 10;
 }
 
 .closeModalContainer {
-  position: fixed;
-  cursor: default;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  z-index: 5;
+    position: fixed;
+    cursor: default;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 5;
 }
 
 // Styles for the arrow divs
 .arrowLeft,
 .arrowRight {
-  position: absolute;
-  top: 50%; // Center vertically
-  transform: translateY(-50%); // Offset by half its height for perfect centering
-  z-index: 10; // Ensure the arrows are above other content
-  cursor: pointer; // Change cursor to indicate clickability
-  color: #007da9; // Adjust the color as needed
-  padding: 10px; // Add some padding around the arrow
-  font-size: 48px; // Size of the arrow
+    position: absolute;
+    top: 50%; // Center vertically
+    transform: translateY(-50%); // Offset by half its height for perfect centering
+    z-index: 10; // Ensure the arrows are above other content
+    cursor: pointer; // Change cursor to indicate clickability
+    color: #007da9; // Adjust the color as needed
+    padding: 10px; // Add some padding around the arrow
+    font-size: 48px; // Size of the arrow
 }
 
-.arrowLeft:hover> :nth-child(1),
-.arrowRight:hover> :nth-child(1) {
-  background-color: rgb(240, 240, 240);
-  opacity: 0.5;
-  border-radius: 50%;
+.arrowLeft:hover > :nth-child(1),
+.arrowRight:hover > :nth-child(1) {
+    background-color: rgb(240, 240, 240);
+    opacity: 0.5;
+    border-radius: 50%;
 }
 
 // Specific styles for the left arrow
 .arrowLeft {
-  left: -0.9%; // Adjust the distance from the left edge of the container
+    left: -0.9%; // Adjust the distance from the left edge of the container
 }
 
 // Specific styles for the right arrow
 .arrowRight {
-  right: -0.9%; // Adjust the distance from the right edge of the container
+    right: -0.9%; // Adjust the distance from the right edge of the container
 }
 
 @keyframes scrollPepoleAnimation {
-  0% {
-    left: 0%;
-  }
+    0% {
+        left: 0%;
+    }
 
-  50% {
-    left: 50%;
-  }
+    50% {
+        left: 50%;
+    }
 
-  100% {
-    left: 0%;
-  }
+    100% {
+        left: 0%;
+    }
 }
 
 .inputContainer {
-  // Input & img div
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  width: 90%;
-  border: none;
-
-  > :first-child {
-    // Input
-    width: 77%;
-    margin: 1% 4% 2% 7%;
-    background-color: #eeeded;
+    // Input & img div
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
     border: none;
-  }
 
-  >img {
-    width: 9%;
-    margin: 0 7% 0 0;
-    transform: rotate(180deg) !important;
-    cursor: pointer;
-    transition: 0.3s;
-    animation: slideSendButton 1s infinite;
-
-    &:hover {
-      animation-play-state: paused;
+    > :first-child {
+        // Input
+        width: 77%;
+        margin: 1% 4% 2% 7%;
+        background-color: #eeeded;
+        border: none;
     }
-  }
+
+    > img {
+        width: 9%;
+        margin: 0 7% 0 0;
+        transform: rotate(180deg) !important;
+        cursor: pointer;
+        transition: 0.3s;
+        animation: slideSendButton 1s infinite;
+
+        &:hover {
+            animation-play-state: paused;
+        }
+    }
 }
 
 .emailSend {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
 }
 
 .placeholderStyle {
-  background-color: #eeeded !important;
-
+    background-color: #eeeded !important;
 }
 
 @keyframes scrollPepoleAnimation {
-  0% {
-    left: 0%;
-  }
+    0% {
+        left: 0%;
+    }
 
-  50% {
-    left: 50%;
-  }
+    50% {
+        left: 50%;
+    }
 
-  100% {
-    left: 0%;
-  }
+    100% {
+        left: 0%;
+    }
 }
 
 @keyframes scrollPepoleAnimation {
-  0% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+    0% {
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-  5% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+    5% {
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 
-  50% {
-    -moz-transform: translateX(-15%);
-    -webkit-transform: translateX(-15%);
-    transform: translateX(-15%);
-  }
+    50% {
+        -moz-transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+        transform: translateX(-15%);
+    }
 
-  55% {
-    -moz-transform: translateX(-15%);
-    -webkit-transform: translateX(-15%);
-    transform: translateX(-15%);
-  }
+    55% {
+        -moz-transform: translateX(-15%);
+        -webkit-transform: translateX(-15%);
+        transform: translateX(-15%);
+    }
 
-  100% {
-    -moz-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-  }
+    100% {
+        -moz-transform: translateX(0);
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
 }
 
 @keyframes slideSendButton {
-  0% {
-    transform: translateX(0);
-  }
+    0% {
+        transform: translateX(0);
+    }
 
-  50% {
-    transform: translateX(13%);
-  }
+    50% {
+        transform: translateX(13%);
+    }
 
-  100% {
-    transform: translateX(0);
-  }
+    100% {
+        transform: translateX(0);
+    }
 }
 
 @media (max-width: 1024px) {
-  .BirthdaysBackGroundImage {
-    display: flex;
-    flex-direction: column; // Stacks the image and content on smaller screens
-    align-items: center;
-    justify-content: center;
-    gap: 2em;
-  }
+    .BirthdaysBackGroundImage {
+        display: flex;
+        flex-direction: column; // Stacks the image and content on smaller screens
+        align-items: center;
+        justify-content: center;
+        gap: 2em;
+    }
 
-  .BirthdaysLeftContainer {
-    width: 91%;
-    justify-content: center;
-  }
+    .BirthdaysLeftContainer {
+        width: 91%;
+        justify-content: center;
+    }
 
-  .BirthdaysRightContainer {
-    width: 91%;
-    justify-content: center;
-  }
+    .BirthdaysRightContainer {
+        width: 91%;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 768px) {
+    .BirthdaysContainer {
+        width: 88%;
 
-  .BirthdaysContainer {
-    width: 88%;
+        .BirthdaysPersonContainer {
+            gap: 0;
 
-    .BirthdaysPersonContainer {
-      gap: 0;
-
-      .item {
-        width: 10%;
-      }
+            .item {
+                width: 10%;
+                min-width: 120px;
+            }
+        }
     }
 
-  }
+    .BirthdaysRightContainer {
+        display: flex;
+        justify-content: center;
+    }
 
-  .BirthdaysRightContainer {
-    display: flex;
-    justify-content: center;
-  }
+    // .arrowRight {
+    //   right: -10px
+    // }
 
-  // .arrowRight {
-  //   right: -10px
-  // }
-
-  // .arrowLeft {
-  //   left: -10px
-  // }
+    // .arrowLeft {
+    //   left: -10px
+    // }
 }
