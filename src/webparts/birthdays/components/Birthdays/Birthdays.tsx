@@ -245,7 +245,7 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
         this.setState({ isChangingPage: true }, () => {
             setTimeout(() => {
                 this.setState((prevState) => {
-                    const totalPages = Math.ceil(this.state.BirthdaysList.length / this.state.pageItemsNumber);
+                    const totalPages = Math.ceil(this.state.BirthdaysList?.length / this.state.pageItemsNumber);
                     let newState: any = {
                         isChangingPage: false,
                     };
@@ -314,7 +314,7 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                                     onClick={this.handleNextClick}
                                     style={{
                                         visibility:
-                                            this.state.currentPage * this.state.pageItemsNumber < this.state.BirthdaysList.length
+                                            this.state.currentPage * this.state.pageItemsNumber < this.state.BirthdaysList?.length
                                                 ? "visible"
                                                 : "hidden",
                                     }}
@@ -322,13 +322,12 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                                     <NavigateBeforeIcon fontSize="large" />
                                 </div>
                                 <div
-                                    className={`${styles.BirthdaysPersonContainer} ${
-                                        this.state.isChangingPage ? styles.changing : ""
-                                    }`}
+                                    className={`${styles.BirthdaysPersonContainer} ${this.state.isChangingPage ? styles.changing : ""
+                                        }`}
                                 >
                                     {!this.state.IsLoading ? (
                                         <>
-                                            {this.state.BirthdaysList.length > 0 ? (
+                                            {this.state.BirthdaysList?.length > 0 ? (
                                                 currentItems.map((People, idx) => (
                                                     <li
                                                         id={`popover_${idx}`}
@@ -351,19 +350,19 @@ export default class Birthdays extends React.Component<IBirthdaysProps, IBirthda
                                                             {/* Balloons Image */}
                                                             {moment().format("MM-DD") ===
                                                                 moment(People?.BirthdayDate).format("MM-DD") && (
-                                                                <img
-                                                                    src={require("../../assets/balloons.svg")}
-                                                                    alt=""
-                                                                    style={{
-                                                                        position: "absolute",
-                                                                        top: "0",
-                                                                        left: "0",
-                                                                        right: "70px",
-                                                                        width: "40px", // Adjust width as needed
-                                                                        height: "190px", // Adjust height as needed
-                                                                    }}
-                                                                />
-                                                            )}
+                                                                    <img
+                                                                        src={require("../../assets/balloons.svg")}
+                                                                        alt=""
+                                                                        style={{
+                                                                            position: "absolute",
+                                                                            top: "0",
+                                                                            left: "0",
+                                                                            right: "70px",
+                                                                            width: "40px", // Adjust width as needed
+                                                                            height: "190px", // Adjust height as needed
+                                                                        }}
+                                                                    />
+                                                                )}
                                                         </div>
 
                                                         <Tooltip title={People?.Title}>

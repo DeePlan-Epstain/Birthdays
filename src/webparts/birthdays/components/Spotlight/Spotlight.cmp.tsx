@@ -54,12 +54,12 @@ export default function Spotlight({ sp, SpotlightId, context, SpotlightInterval 
         const interval = setInterval(() => {
             setState(prevState => ({
                 ...prevState,
-                currentIndex: (prevState.currentIndex + 1) % prevState.employeesList.length,
+                currentIndex: (prevState.currentIndex + 1) % prevState.employeesList?.length,
             }));
         }, SpotlightInterval);
 
         return () => clearInterval(interval); // Cleanup the interval on component unmount
-    }, [state.isLoading, state.employeesList.length]);
+    }, [state.isLoading, state.employeesList?.length]);
 
     const currentEmployee = state?.employeesList[state.currentIndex];
 
@@ -90,7 +90,7 @@ export default function Spotlight({ sp, SpotlightId, context, SpotlightInterval 
                         />
                     </div>
                     <div dangerouslySetInnerHTML={{ __html: currentEmployee?.eventDescription }} className={styles.eventDescription}
-                        style={{ overflowY: currentEmployee?.eventDescription.length < 150 ? 'hidden' : 'scroll' }}></div>
+                        style={{ overflowY: currentEmployee?.eventDescription?.length < 150 ? 'hidden' : 'scroll' }}></div>
                     <span className={styles.sportLightEmployeeName}>{currentEmployee?.employeeName}</span>
                 </div>
             )}
